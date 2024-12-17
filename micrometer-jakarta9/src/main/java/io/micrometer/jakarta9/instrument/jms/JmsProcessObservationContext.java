@@ -38,7 +38,7 @@ public class JmsProcessObservationContext extends ReceiverContext<Message> {
             try {
                 return message.getStringProperty(key);
             }
-            catch (JMSException exc) {
+            catch (JMSException | RuntimeException exc) {
                 return null;
             }
         });

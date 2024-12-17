@@ -40,7 +40,7 @@ public class JmsPublishObservationContext extends SenderContext<Message> {
                     message.setStringProperty(key, value);
                 }
             }
-            catch (JMSException exc) {
+            catch (JMSException | RuntimeException exc) {
                 // ignore
             }
         });
